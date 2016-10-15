@@ -6,12 +6,16 @@
     $("#form-login").submit(function (event) {
         event.preventDefault();
 
-        var user = $("#username").val(), password = $("#password").val();
+        var user = $("#username").val(), api = new apiModule(user, apiKey);
 
-        var api = new apiModule(user, password);
+        $("#total-repos").empty(); $("#response-github").empty();
 
         api.getRepositories().then(function (response) {
-            $("#response-github").append("<div class='row'><div class='col-md-12 text-center'><img src='"+response.avatar_url+"' style='max-width: 100%' width='20%'>&nbsp;&nbsp;<p class='label label-danger'>"+response.html_url+"</p></div></div>");
+            $("#total-repos").append('<h3>Total Repositories : <span class="label label-danger" >'+response.length+'</span></h3>');
+
+            response.forEach(function (objRepo) {
+                $("#response-github").append("<div class='row repository'><div class='col-md-12'><h3 class='form-section'><a href='"+objRepo.html_url+"' target='_blank'>"+objRepo.name+" <b>[ "+objRepo.id+" ]</b></a></h3><p>"+objRepo.description+"</p></div></div>");
+            });
         }).catch(function (reason) {
             console.log(reason);
         });

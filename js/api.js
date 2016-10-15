@@ -4,7 +4,7 @@ function Api (user, apikey) {
 }
 
 Api.prototype.getRepositories = function () {
-    return $.get('https://api.github.com/users/'+this.user+'?access_token=' + this.apikey).then(function(response){
+    return $.get('https://api.github.com/users/'+this.user+'/repos?access_token=' + this.apikey).then(function(response){
       return response;
     }).fail(function(error){
       console.log(error.responseJSON.message);

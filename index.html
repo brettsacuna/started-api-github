@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Started Bootstrap !</title>
+        <title>Github API !</title>
         <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto|Roboto+Condensed" rel="stylesheet">
         <link rel="stylesheet" href="build/css/vendor.css">
         <link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-10 col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
                     <form class="form-login" id="form-login" role="form" data-toggle="validator">
-                        <h3 class="form-section">Login form</h3>
+                        <h3 class="form-section">Form Testing</h3>
                         <div class="form-group">
                             <label class="control-label" for="username">Username : </label>
                             <div class="input-group">
@@ -22,19 +22,24 @@
                             </div>
                             <div class="help-block with-errors"></div>
                         </div>
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label class="control-label" for="password">Password : </label>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-flash"></i></span>
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Type password" data-error="Please !. Entry password" required>
                             </div>
                             <div class="help-block with-errors"></div>
-                        </div>
+                        </div>-->
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block btn-lg">Sign in&nbsp;&nbsp;<i class="glyphicon glyphicon-log-in"></i></button>
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">Get repositories&nbsp;&nbsp;<i class="glyphicon glyphicon-tasks"></i></button>
                         </div>
-                        <p class="text-muted text-center"><i>Oncodata Salud - Integral System</i></p>
-                        <code id="response-github"></code>
+                        <p class="text-muted text-center"><i>Testing Github API</i></p>
+                        <div class="row">
+                            <div class="col-md-12 text-center" id="total-repos"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 content-repositories" id="response-github"></div>
+                        </div>
                     </form>
                 </div>
             </div>
