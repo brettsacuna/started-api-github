@@ -1,0 +1,21 @@
+{
+  "name": "started-bootstrap",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "DAVIS BRETTS ACUÑA CORDOVA <dacucordova@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-validator": "^0.11.5"
+  }
+}
